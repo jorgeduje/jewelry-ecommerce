@@ -1,11 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 
-// VIEWS
 import { ProtectedRoutes } from './components/ProtectedRoutes';
+
+// VIEWS
 import { Cart } from './views/Cart';
 import { Login } from './views/Login';
-import { Product } from './views/Product';
+import { ProductSelected } from './views/ProductSelected';
 import { Shop } from './views/Shop';
 
 
@@ -23,7 +24,7 @@ function App() {
           <Route element={<ProtectedRoutes />}>
 
               <Route path="/shop" element={ <Shop /> }/>
-              <Route path="/shop/:id" element={ <Product />}/>
+              <Route path="/shop/:id" element={ <ProductSelected />}/>
               <Route path="/cart" element={ <Cart /> }/>
               
           </Route>

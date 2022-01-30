@@ -1,0 +1,36 @@
+.container-shop{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #faf7f2;
+    padding-top: 10px;
+   
+}
+
+.logout{
+   display: flex;
+   justify-content: flex-end;
+}
+.logout>button{
+    padding: 5px 10px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.container-shop>h1{
+    text-align: center;
+}
+
+.container-products{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+
+}
+

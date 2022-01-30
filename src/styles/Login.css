@@ -1,0 +1,85 @@
+.container-login{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://st.depositphotos.com/1491329/1280/i/600/depositphotos_12801944-stock-photo-gold-makeup-fashion-girl-portrait.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.container-login>form{
+    
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-data-test{
+    width: 90%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-data-test>div{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.container-data-test>div>i{
+    margin: 5px;
+    color: #EEE8AA;
+    font-size: .8rem;
+}
+.container-data-test>div>h4{
+    color: #EEE8AA;
+}
+
+.container-data-test>h2{
+    text-align: center;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+}
+
+.input-container>label{
+    color: #faf7f2;
+}
+
+.input-container>input{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    background-color: #EEE8AA;
+   
+}
+
+.input-container>input:focus{
+    outline: none;
+}
+
+.container-login>form>button{
+    padding: 10px 20px;
+    border-radius: 0 20px 0 20px;
+    border: none;
+    font-size: 1rem;
+    background-color: #EEE8AA;
+    color: black;
+    font-weight: 600;
+}
+
+ /* color oro EEE8AA */
+ /* color oro oscuro DAA520 */
+ 
