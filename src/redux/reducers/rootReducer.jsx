@@ -25,23 +25,51 @@ export const rootReducer = (state = initialState, action)=>{
             }
 
         case Types.add:
-            let doesExist = state.cart.find(product => product[0].id === action.payload)
+            let product = state.cart.find(product => product.id === action.payload)
             
-            return doesExist ? {
+            if(product){
 
-                ...state
+                return{
+                    ...state,
+                    cart: state.cart.map(element => 
+                        element.id === action.payload ? {...element, amount: element.amount + 1 }
+                        : element)
+                }
 
-            }: {
-                ...state,
-                cart: [...state.cart, state.initialData.filter( product => product.id === action.payload)]
+            }else{
+
+                const newProduct = state.initialData.find( product => product.id === action.payload )
+                newProduct.amount = 1
+
+                return{
+                    ...state,
+                    cart: [...state.cart, newProduct]
+                }
             }
 
-        // case Types.remove:
-        //     console.log(action.payload);
-        //     return{
-        //         ...state,
-        //         cart: [ state.cart.filter( item => item.id !== action.payload ) ]
-        //     }
+        case Types.addOne:
+            return{
+                ...state,
+                cart: state.cart.map(element => 
+                    element.id === action.payload ? {...element, amount: element.amount + 1 }
+                    : element)
+            }
+
+            case Types.subOne:
+            return{
+                ...state,
+                cart: state.cart.map(element => 
+                    element.id === action.payload  && element.amount > 0? {...element, amount: element.amount - 1 }
+                    : element)
+            }
+
+
+        case Types.remove:
+            return{
+                ...state,
+                cart:  state.cart.filter( item => item.id !== action.payload ) 
+            }
+        
         
     
         default:

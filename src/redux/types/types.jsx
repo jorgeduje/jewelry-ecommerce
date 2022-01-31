@@ -6,6 +6,8 @@ export const Types = {
     getData: "getData",
     selected: "selected",
     add: "add",
-    remove: "remove"
+    remove: "remove",
+    addOne: "addOne",
+    subOne: "subOne"
 
 }

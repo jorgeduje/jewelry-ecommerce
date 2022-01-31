@@ -1,20 +1,19 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeCart } from '../redux/actions/actions';
+import { removeCart, subOneAmount, addOneAmount } from '../redux/actions/actions';
+import { useNavigate } from 'react-router-dom';
 
 export const Cart = () => {
+
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
 
   const cart = useSelector(state => state.rootReducer.cart)
+
+  const prices = (cart.map( item => Math.floor(item.price * item.amount)))
   
-  // DEVUELVE UN SOLO ARREGLO CON LOS OBJETOS DENTRO
-  const productsCart = cart.flat()
-  console.log(cart);
-
-  const prices = (productsCart.map( item => Math.floor(item.price)))
-
   const totalPrice = prices.reduce( (anterior, actual)=> anterior + actual, 0 )
 
 
@@ -24,26 +23,35 @@ export const Cart = () => {
 
         <div className='header-cart'>
           <h2>Your cart</h2>
-          <button>Buy</button>
+          <h3>Total: {totalPrice}</h3>
+          <button onClick={()=>alert("Buy Successfull")}>Buy</button>
         </div>
 
-        <div>
-          <h3>price: {totalPrice}</h3>
-        </div>
 
         <div className='cart-list'>
           {
-            productsCart.map(item => 
+            cart.map(item => 
                 <div key={item.id} className='card-cart'>
-                  <img src={item.images[0].url} alt="" />
-                  <h4>{item.name}</h4>
-                  <h5>{item.price}</h5>
-                  <button onClick={()=>dispatch(removeCart(item.id))}>remove</button>
+
+                    <img src={item.images[0].url} alt="" />
+                  <div className='info-cart-product'>
+                    <h5>{item.name}</h5>
+                    <h5>{item.price}</h5>
+                  </div>
+
+                  <h6>{item.amount}</h6>
+
+                  <div className='container-btns-cart'>
+                    <i onClick={()=> dispatch(addOneAmount(item.id))} className="fas fa-plus"></i>
+                    <i onClick={()=> dispatch(subOneAmount(item.id))} className="fas fa-minus"></i>
+                    <i onClick={()=>dispatch(removeCart(item.id))} className="fas fa-trash-alt"></i>
+                  </div>
+
                 </div>
             )
           }
         </div>
-
+        <i onClick={()=> navigate("/shop")} className="fas fa-long-arrow-alt-left btn-back"></i>
       </div>
   )
 };

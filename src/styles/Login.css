@@ -83,3 +83,12 @@
  /* color oro EEE8AA */
  /* color oro oscuro DAA520 */
  
+
+
+ @media screen and (min-width: 850px) {
+    .container-login>form{
+    
+        width: 50%;
+    
+    }
+ }

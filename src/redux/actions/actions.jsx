@@ -31,5 +31,19 @@ export const removeCart = ( product )=>{
     }
 }
 
+export const addOneAmount = ( id )=>{
+    return{
+        type: Types.addOne,
+        payload: id
+    }
+}
+
+export const subOneAmount = ( id )=>{
+    return{
+        type: Types.subOne,
+        payload: id
+    }
+}
+
 
 

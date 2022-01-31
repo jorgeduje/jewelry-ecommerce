@@ -21,11 +21,11 @@ export const ProductCard = (props) => {
   return(
       <div className='product-card'>
           <h2>{name}</h2>
-          <img src={images[0].url} alt="" />
+          <img src={images[0].url} alt="" /> 
           <div>
-              <h4>${price}</h4>
+              <h4 className='price'>${Math.floor(price)}</h4>
+              <i onClick={()=> dispatch(addCart(id))} className="fas fa-cart-plus cart"></i>
               <button onClick={()=> selecProduct(props)}>See More</button>
-              <button onClick={()=> dispatch(addCart(id))}>+ Cart</button>
           </div>
       </div>
   )

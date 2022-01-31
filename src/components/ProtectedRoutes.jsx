@@ -13,4 +13,5 @@ export const ProtectedRoutes = () => {
     return <Navigate to="/" />;
 
   } 
+  
 };
