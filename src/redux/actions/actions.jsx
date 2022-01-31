@@ -24,5 +24,12 @@ export const addCart = ( product )=>{
     }
 }
 
+export const removeCart = ( product )=>{
+    return{
+        type: Types.remove,
+        payload: product
+    }
+}
+
 
 

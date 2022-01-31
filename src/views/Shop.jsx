@@ -16,6 +16,8 @@ export const Shop = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const initialData = useSelector(state => state.rootReducer.initialData)
+
+  console.log(initialData);
  
   const logOut = () => {
     

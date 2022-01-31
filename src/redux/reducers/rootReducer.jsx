@@ -3,7 +3,7 @@ import { Types } from "../types/types";
 const initialState = {
 
     initialData: [],
-    productSelect:{},
+    productSelect: null,
     cart: []
 
 }
@@ -21,7 +21,7 @@ export const rootReducer = (state = initialState, action)=>{
         case Types.selected:
             return{
                 ...state,
-                productSelect: state.initialData.filter( product => product.id === action.payload)
+                productSelect: action.payload
             }
 
         case Types.add:
@@ -35,6 +35,13 @@ export const rootReducer = (state = initialState, action)=>{
                 ...state,
                 cart: [...state.cart, state.initialData.filter( product => product.id === action.payload)]
             }
+
+        // case Types.remove:
+        //     console.log(action.payload);
+        //     return{
+        //         ...state,
+        //         cart: [ state.cart.filter( item => item.id !== action.payload ) ]
+        //     }
         
     
         default:

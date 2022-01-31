@@ -3,14 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getSelectedProduct, addCart} from '../redux/actions/actions';
 
-export const ProductCard = ({name, images, price, id}) => {
+export const ProductCard = (props) => {
+
+  const {name, images, price, id} = props
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
   
-  const selecProduct = (id)=>{
+  const selecProduct = (obj)=>{
 
-    dispatch(getSelectedProduct(id))
+    dispatch(getSelectedProduct(obj))
     navigate(`/shop/${id}`)
 
   }
@@ -22,7 +24,7 @@ export const ProductCard = ({name, images, price, id}) => {
           <img src={images[0].url} alt="" />
           <div>
               <h4>${price}</h4>
-              <button onClick={()=> selecProduct(id)}>See More</button>
+              <button onClick={()=> selecProduct(props)}>See More</button>
               <button onClick={()=> dispatch(addCart(id))}>+ Cart</button>
           </div>
       </div>

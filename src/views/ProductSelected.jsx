@@ -5,12 +5,12 @@ import { useSelector } from 'react-redux';
 export const ProductSelected = () => {
 
 
-  const [ product ] = useSelector( state => state.rootReducer.productSelect)
+  const productSelect = useSelector( state => state.rootReducer.productSelect)
 
 
   return(
       <div>
-          <h2>{product.name}</h2>
+          <h2>{productSelect.name}</h2>
       </div>
   )
 };
