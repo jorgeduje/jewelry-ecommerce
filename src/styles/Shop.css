@@ -16,8 +16,10 @@
     margin-right: 10px;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: black;
-    color: white;
+    background-color: #EEE8AA;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .container-shop>h1{

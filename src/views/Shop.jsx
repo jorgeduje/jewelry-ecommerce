@@ -37,8 +37,8 @@ export const Shop = () => {
 
       <div className='container-shop'>
             <div className='logout'>
-              <button onClick={logOut}>log out</button>
-              <button onClick={()=>navigate("/cart")}>go cart</button>
+              <button onClick={logOut}>Log Out</button>
+              <button onClick={()=>navigate("/cart")}>Go Cart</button>
             </div>
             <h1>Jewelry store</h1>
             <div className='container-products'>

@@ -66,8 +66,11 @@
    
 }
 
+
 .input-container>input:focus{
+    
     outline: none;
+
 }
 
 .container-login>form>button{
@@ -79,10 +82,6 @@
     color: black;
     font-weight: 600;
 }
-
- /* color oro EEE8AA */
- /* color oro oscuro DAA520 */
- 
 
 
  @media screen and (min-width: 850px) {
