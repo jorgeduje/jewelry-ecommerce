@@ -3,6 +3,8 @@
 .nav-bar{
     position: relative;
     overflow: hidden;
+   
+    
 }
 
 .logout{
@@ -19,7 +21,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: center;
+    padding-bottom: 10px;
+   
+   
    
 }
 
@@ -34,7 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: center;
     animation: burguerShowDos 1s linear;
 
 }
@@ -47,17 +52,18 @@
 }
 
 .nav-bar>section>button{
-    width: 100px;
+    width: 120px;
     padding: 8px 5px;
-    border-radius: 0 10px 0 10px;
+    background: none;
     border: none;
-    background-color: #f7e7e7;
+   color: #f7e7e7;
     margin-left: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid white;
+    font-family: 'Roboto', sans-serif;
 }
 
-.hide{
-    display: none;
-}
+
 
 @keyframes burguerShow{
     0%{

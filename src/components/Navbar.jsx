@@ -23,16 +23,16 @@ export const Navbar = () => {
             <div className='logout'>
                 <button onClick={()=>navigate("/home")}>Home</button>
                 <button onClick={()=>navigate("/shop")}>Shop</button>
-                <button onClick={()=>navigate("/cart")}>Go Cart</button>
+                <button onClick={()=>navigate("/cart")}>Cart</button>
                 <button onClick={logOut}>Log Out</button>
             </div> 
 
             <section className={menu ? "logout-mobile" : "logout-mobile-hidden"}>
 
-                <button onClick={()=>navigate("/home")} className={menu ? "" : 'hide'}>Home</button>
-                <button onClick={()=>navigate("/shop")} className={menu ? "" : 'hide'}>Shop</button>
-                <button onClick={()=>navigate("/cart")} className={menu ? "" : 'hide'}>Go Cart</button>
-                <button onClick={logOut} className={menu ? "" : 'hide'}>Log Out</button>
+                <button onClick={()=>navigate("/home")} >Home</button>
+                <button onClick={()=>navigate("/shop")} >Shop</button>
+                <button onClick={()=>navigate("/cart")} >Cart</button>
+                <button onClick={logOut}>Log Out</button>
 
             </section> 
 
