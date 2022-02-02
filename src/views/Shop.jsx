@@ -50,6 +50,7 @@ export const Shop = () => {
                     name={product.name}
                     images={product.images}
                     price={product.price}
+                    product={product}
                   />
                 )
               }

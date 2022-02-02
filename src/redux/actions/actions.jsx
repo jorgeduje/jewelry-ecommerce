@@ -45,5 +45,11 @@ export const subOneAmount = ( id )=>{
     }
 }
 
+export const deleteCart = ()=>{
+    return{
+        type: Types.clearCart
+    }
+}
+
 
 

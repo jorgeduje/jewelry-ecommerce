@@ -35,15 +35,16 @@
 
 .container-data-test>div>i{
     margin: 5px;
-    color: #EEE8AA;
+    color: #d9ae94;
     font-size: .8rem;
 }
 .container-data-test>div>h4{
-    color: #EEE8AA;
+    color: #d9ae94;
 }
 
 .container-data-test>h2{
     text-align: center;
+    color: whitesmoke;
 }
 
 .input-container{
@@ -62,7 +63,8 @@
     border-radius: 5px;
     border: none;
     margin-top: 5px;
-    background-color: #EEE8AA;
+    background-color: #d9ae94;
+    color: white;
    
 }
 
@@ -78,9 +80,9 @@
     border-radius: 0 20px 0 20px;
     border: none;
     font-size: 1rem;
-    background-color: #EEE8AA;
-    color: black;
-    font-weight: 600;
+    background-color: #d9ae94;
+    color: white;
+    font-weight: 500;
 }
 
 

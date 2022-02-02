@@ -5,7 +5,7 @@ import { getSelectedProduct, addCart} from '../redux/actions/actions';
 
 export const ProductCard = (props) => {
 
-  const {name, images, price, id} = props
+  const {name, images, price, id, product} = props
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ export const ProductCard = (props) => {
           <div>
               <h4 className='price'>${Math.floor(price)}</h4>
               <i onClick={()=> dispatch(addCart(id))} className="fas fa-cart-plus cart"></i>
-              <button onClick={()=> selecProduct(props)}>See More</button>
+              <button onClick={()=> selecProduct(product)}>See More</button>
           </div>
       </div>
   )

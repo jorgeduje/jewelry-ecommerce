@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeCart, subOneAmount, addOneAmount } from '../redux/actions/actions';
+import { removeCart, subOneAmount, addOneAmount, deleteCart } from '../redux/actions/actions';
 import { useNavigate } from 'react-router-dom';
 
 export const Cart = () => {
@@ -16,6 +16,12 @@ export const Cart = () => {
   
   const totalPrice = prices.reduce( (anterior, actual)=> anterior + actual, 0 )
 
+  const buying = ()=>{
+
+    alert("Buy Successfull")
+    dispatch(deleteCart())
+  }
+
 
 
   return(
@@ -24,7 +30,7 @@ export const Cart = () => {
         <div className='header-cart'>
           <h2>Your cart</h2>
           <h3>Total: {totalPrice}</h3>
-          <button onClick={()=>alert("Buy Successfull")}>Buy</button>
+          <button onClick={()=>buying()}>Buy</button>
         </div>
 
 
@@ -33,7 +39,7 @@ export const Cart = () => {
             cart.map(item => 
                 <div key={item.id} className='card-cart'>
 
-                    <img src={item.images[0].url} alt="" />
+                  <img src={item.images[0].url} alt="" />
                   <div className='info-cart-product'>
                     <h5>{item.name}</h5>
                     <h5>{item.price}</h5>

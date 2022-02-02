@@ -8,6 +8,7 @@ export const Types = {
     add: "add",
     remove: "remove",
     addOne: "addOne",
-    subOne: "subOne"
+    subOne: "subOne",
+    clearCart: "clearCart"
 
 }

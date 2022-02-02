@@ -14,11 +14,15 @@
     padding: 10px;
 }
 
+.header-cart>h2, h3{
+    color: #997b66;
+}
+
 .header-cart>button{
-    background-color: green;
+    background-color: rgb(32, 170, 32);
     color: white;
     border: none;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -41,7 +45,7 @@
     align-items: center;
     margin-right: 10px;
     margin-bottom: 10px;
-    box-shadow: 2px 2px 10px black;
+    box-shadow: 3px 3px 20px #b7b7a4;
     border-radius: 10px;
     
     
@@ -65,12 +69,14 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    color: #79796d;
 }
 
 .card-cart>h6{
     width: 80px;
     text-align: center;
     font-size: 1rem;
+    color: #79796d;
     
 }
 
@@ -88,6 +94,7 @@
 
     padding: 5px 5px;
     cursor: pointer;
+    color: #d9ae94;
 }
 
 .btn-back{
@@ -97,3 +104,5 @@
     font-size: 2rem;
     cursor: pointer;
 }
+
+

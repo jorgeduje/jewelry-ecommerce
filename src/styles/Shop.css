@@ -16,9 +16,9 @@
     margin-right: 10px;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #EEE8AA;
-    color: black;
-    border: 1px solid black;
+    background-color: #d9ae94;
+    color: #faf3f3;
+    box-shadow: 2px 2px 2px #6b705c;
     cursor: pointer;
 }
 
@@ -26,6 +26,8 @@
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 10px;
+    color: #997b66;
+    font-size: 3rem;
 }
 
 .container-products{

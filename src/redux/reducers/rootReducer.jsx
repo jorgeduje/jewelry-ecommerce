@@ -69,6 +69,12 @@ export const rootReducer = (state = initialState, action)=>{
                 ...state,
                 cart:  state.cart.filter( item => item.id !== action.payload ) 
             }
+
+        case Types.clearCart:
+            return{
+                ...state,
+                cart: []
+            }
         
         
     
