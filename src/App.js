@@ -5,6 +5,7 @@ import { ProtectedRoutes } from './components/ProtectedRoutes';
 
 // VIEWS
 import { Cart } from './views/Cart';
+import { Home } from './views/Home';
 import { Login } from './views/Login';
 import { ProductSelected } from './views/ProductSelected';
 import { Shop } from './views/Shop';
@@ -22,7 +23,7 @@ function App() {
           <Route path="/" element={ <Login /> }/>
           
           <Route element={<ProtectedRoutes />}>
-
+              <Route path="/home" element={ <Home />}/>
               <Route path="/shop" element={ <Shop /> }/>
               <Route path="/shop/:id" element={ <ProductSelected />}/>
               <Route path="/cart" element={ <Cart /> }/>

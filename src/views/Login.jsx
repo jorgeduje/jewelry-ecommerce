@@ -13,7 +13,7 @@ export const Login = () => {
         axios.post('https://ecommerce-exercise-backend.herokuapp.com/login/', data)
             .then(res => {
                 localStorage.setItem("token", res.data.access);
-                navigate("/shop");
+                navigate("/home");
             })
             .catch(() => setLoginError("Invalid Credentials"));
     }

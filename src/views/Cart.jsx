@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCart, subOneAmount, addOneAmount, deleteCart } from '../redux/actions/actions';
 import { useNavigate } from 'react-router-dom';
+import { Navbar } from '../components/Navbar';
 
 export const Cart = () => {
 
@@ -26,7 +27,7 @@ export const Cart = () => {
 
   return(
       <div className='container-cart'>
-
+        <Navbar />
         <div className='header-cart'>
           <h2>Your cart</h2>
           <h3>Total: {totalPrice}</h3>
@@ -35,6 +36,7 @@ export const Cart = () => {
 
 
         <div className='cart-list'>
+         
           {
             cart.map(item => 
                 <div key={item.id} className='card-cart'>

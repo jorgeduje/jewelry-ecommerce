@@ -8,6 +8,7 @@ import { getConfig } from '../utils/getConfig';
 
 import { getProducts } from '../redux/actions/actions';
 import { ProductCard } from '../components/ProductCard';
+import { Navbar } from '../components/Navbar';
 
 
 
@@ -16,14 +17,6 @@ export const Shop = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const initialData = useSelector(state => state.rootReducer.initialData)
-
- 
-  const logOut = () => {
-    
-    localStorage.setItem("token", "");
-    navigate("/");
-    
-  };
   
   useEffect(()=>{
     
@@ -36,10 +29,7 @@ export const Shop = () => {
   return (
 
       <div className='container-shop'>
-            <div className='logout'>
-              <button onClick={logOut}>Log Out</button>
-              <button onClick={()=>navigate("/cart")}>Go Cart</button>
-            </div>
+            <Navbar />
             <h1>Jewelry store</h1>
             <div className='container-products'>
               {
@@ -55,6 +45,8 @@ export const Shop = () => {
                 )
               }
             </div>
+
+            <i onClick={()=> navigate("/home")} className="fas fa-long-arrow-alt-left btn-back"></i>
             
       </div>
   )
