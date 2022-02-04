@@ -97,10 +97,10 @@
          margin-right: 10px;
          border-radius: 5px;
          font-size: 1rem;
-         background-color: #d9ae94;
-         color: #faf3f3;
-         box-shadow: 2px 2px 2px #6b705c;
+         color: #d9ae94;
          cursor: pointer;
+         background: none;
+         border-bottom: 2px solid #d9ae94;
      }
 
      .logout-mobile{
